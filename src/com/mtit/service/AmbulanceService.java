@@ -5,9 +5,31 @@ public class AmbulanceService {
 		String type = ambulance.getAmbulanceType();
 		
 		if(type.equals("A")) {
-			return "Fee = " + ( distance * 50.00); 
+			return "====================================================\n"+
+					
+					"AMBULANCE TYPE:\t" + type + 
+					"\nDISTANCE:\t"+ distance +
+					"\n---------------------------------"+
+					"\nFEE =\tRs. " + ( distance * 50.00)+
+					"\n---------------------------------"; 
+		}else if (type.equals("B")){
+			return "====================================================\n"+
+					"AMBULANCE TYPE:\t" + type + 
+					"\nDISTANCE:\t"+ distance +
+					"\nRATE:\tRs. 30/km" +
+					"\n---------------------------------"+
+					"\nFEE =\tRs. " + ( distance * 30.00)+
+					"\n---------------------------------"; 
+		}else if (type.equals("C")){
+			return "====================================================\n"+
+					"AMBULANCE TYPE:\t" + type + 
+					"\nDISTANCE:\t"+ distance +
+					"\nRATE:\tRs. 20/km" +
+					"\n---------------------------------"+
+					"\nFEE = Rs. \t" + ( distance * 20.00)+
+					"\n---------------------------------"; 
 		}else {
-			return "Fee = " + ( distance * 10.00); 
+			return "INVALID AMBULANCE TYPE!";
 		}
 		
 	}
